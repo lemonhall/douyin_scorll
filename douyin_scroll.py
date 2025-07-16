@@ -21,9 +21,9 @@ class DouyinScrollController:
     def on_key_press(self, key):
         """处理键盘按键事件"""
         try:
-            # 检查是否是多媒体"下一曲"键
-            if key == Key.media_next:
-                print("🎵 检测到下一曲键，开始滚动...")
+            # 检查是否是方向键下键
+            if key == Key.down:
+                print("⬇️ 检测到方向键下键，开始滚动...")
                 self.scroll_down()
                 
         except AttributeError:
@@ -51,7 +51,7 @@ class DouyinScrollController:
         """启动键盘监听"""
         print("🚀 抖音滚动助手已启动")
         print("📝 使用说明：")
-        print("   • 按下键盘的'下一曲'键 (Media Next) 来向下滚动")
+        print("   • 按下键盘的'方向键下键' (↓) 来向下滚动")
         print("   • 按下 ESC 键退出程序")
         print("   • 请确保目标窗口处于活动状态")
         print("⏳ 等待按键...")
